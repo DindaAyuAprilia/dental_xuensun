@@ -18,10 +18,13 @@ memastikan setiap interaksi berjalan lancar dan terorganisir dengan baik. Selain
 yang memungkinkan Anda memilih waktu konsultasi yang sesuai dengan kebutuhan Anda tanpa harus datang langsung ke klinik. 
 Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih untuk menjalani layanan yang dipilih, yaitu perawatan gigi dengan dokter gigi.
 
+# Beranda Pasien
 ![beranda1](https://github.com/user-attachments/assets/6f745553-af96-431e-9aab-194b0e1aa584)
 ![beranda2](https://github.com/user-attachments/assets/60aed3f7-0df2-4b45-a7ce-9834e0617f9e)
 ![beranda3](https://github.com/user-attachments/assets/1b52f3bd-1438-403f-b8a8-f4e63ca326c2)
 ![beranda4](https://github.com/user-attachments/assets/408acf68-f9ad-4a3e-a86f-01f54a9aa3b8)
+
+# Beranda Admin
 
 ## Fitur Utama
 1.	Login, Registrasi, Logout
@@ -129,6 +132,8 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
        ![login](https://github.com/user-attachments/assets/8aec641f-41fe-4823-89e7-35077ca25dab)
       - Masukkan email dan password pada halaman login.
       - Klik tombol Masuk untuk mengakses dashboard Admin.
+        ![WhatsApp Image 2024-11-29 at 22 21 12](https://github.com/user-attachments/assets/1d72d8ef-f90e-40b1-bee1-23d50569d4c9)
+
 
     - Logout
       - Klik tombol Keluar yang tersedia di navigasi untuk keluar.
