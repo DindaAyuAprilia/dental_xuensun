@@ -110,15 +110,15 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
       ![login](https://github.com/user-attachments/assets/8aec641f-41fe-4823-89e7-35077ca25dab)
       - Masukkan email dan password pada halaman login.
       - Klik tombol Masuk untuk mengakses dashboard Dokter.
-
+        ![WhatsApp Image 2024-11-29 at 23 24 45](https://github.com/user-attachments/assets/0c0bdb0f-e420-4965-aac6-6a8e337bc10a)
     - Logout
       - Klik tombol Keluar yang tersedia di navigasi untuk keluar.
-      - 
+        
 2. Melihat Daftar Reservasi 
    - Klik menu Reservasi di navigasi.
-     - Dokter dapat melihat semua daftar reservasi yang diajukan pasien 
-     ![WhatsApp Image 2024-11-29 at 23 24 45](https://github.com/user-attachments/assets/0c0bdb0f-e420-4965-aac6-6a8e337bc10a)
-
+     - Dokter dapat melihat semua daftar reservasi yang diajukan pasien
+       ![WhatsApp Image 2024-11-29 at 23 25 07](https://github.com/user-attachments/assets/574e4000-9572-4a90-a97b-5bf9c2b1356b)
+       
 3. Melihat Jadwal Dokter
    - Klik menu Jadwal di navigasi
      - Dokter dapat melihat daftar jadwal praktik mereka sendiri
