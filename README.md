@@ -84,10 +84,9 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
         ![detail_layanan](https://github.com/user-attachments/assets/c611c726-9c70-4b2e-a90e-73611d4a9dfb)
 
     - Pilih Dokter
-      ![dokter1](https://github.com/user-attachments/assets/1de3f1fb-1826-417e-a224-f4e6f1c7a79c)
-
       - Jika sudah masuk, setelah klik tombol Reservasi maka akan diarahkan ke halaman dokter.
       - Daftar dokter yang tersedia untuk layanan tersebut akan ditampilkan lengkap dengan nama, spesialisasi, dan jadwal praktik dokter tersebut.
+        ![dokter1](https://github.com/user-attachments/assets/1de3f1fb-1826-417e-a224-f4e6f1c7a79c)
       - Pilih dokter yang Anda inginkan dengan mengklik tombol Pilih Dokter.
       - Setelah itu akan menampilkkan jadwal dokter yang tersedia.
         ![jadwal](https://github.com/user-attachments/assets/21f2e5f7-41c1-42a4-a189-107e36873778)
