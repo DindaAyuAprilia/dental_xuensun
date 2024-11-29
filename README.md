@@ -104,17 +104,6 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
     - Selesai
       - Setelah semua data terisi, klik tombol Reservasi untuk menyimpan janji temu.
 
-3. Lihat Riwayat Reservasi
-   - Klik menu Reservasi di navigasi utama.
-   - Setelah diklik akan menampikan daftar riwayat reservasi.
-   - Riwayat reservasi akan menampilkan informasi berikut:
-     - Nama Pasien
-     - Jenis Kelamin
-     - Waktu Kunjungan
-     - Layanan
-     - Dokter
-     - Status
-
 ### B.	Dokter
 1.	Login dan Logout
     - Login
@@ -124,7 +113,16 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
 
     - Logout
       - Klik tombol Keluar yang tersedia di navigasi untuk keluar.
+      - 
+2. Melihat Daftar Reservasi 
+   - Klik menu Reservasi di navigasi.
+     - Dokter dapat melihat semua daftar reservasi yang diajukan pasien 
+     ![WhatsApp Image 2024-11-29 at 23 24 45](https://github.com/user-attachments/assets/0c0bdb0f-e420-4965-aac6-6a8e337bc10a)
 
+3. Melihat Jadwal Dokter
+   - Klik menu Jadwal di navigasi
+     - Dokter dapat melihat daftar jadwal praktik mereka sendiri
+       ![WhatsApp Image 2024-11-29 at 23 27 26](https://github.com/user-attachments/assets/c60783f5-a5d6-412b-9acb-ae69dab6e28b)
 
 ### C.	Admin
 1.	Login dan Logout
@@ -141,7 +139,6 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
     - Klik menu Data Pasien di navigasi.
     - Admin dapat melihat semua data pasien melalui menu ini.
       ![WhatsApp Image 2024-11-29 at 22 25 26](https://github.com/user-attachments/assets/9777ca11-588c-47be-93f5-4b3b9e383b67)
-
 
 3.	Manajemen Data Dokter (CRUD)
     - Melihat Data Dokter
