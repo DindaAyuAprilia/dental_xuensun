@@ -214,6 +214,7 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
 5. Melihat Daftar Reservasi Pasien
    - Klik menu Reservasi di navigasi.
     - Admin dapat melihat semua daftar reservasi yang diajukan pasien.
+    - Admin dapat mengubah status reservasi pasien dengan memilih dari dropdown Aksi yang berisi Pending, Done, dan Reject, kemudian klik tombol Ubah Status.
       ![WhatsApp Image 2024-11-29 at 22 28 12](https://github.com/user-attachments/assets/c859057b-5fe9-41c2-9e98-f1786f7d0b6d)
 
 
