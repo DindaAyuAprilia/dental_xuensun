@@ -86,6 +86,7 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
     - Pilih Dokter
       - Jika sudah masuk, setelah klik tombol Reservasi maka akan diarahkan ke halaman dokter.
       - Daftar dokter yang tersedia untuk layanan tersebut akan ditampilkan lengkap dengan nama dan spesialisasi dokter tersebut.
+      - Pasien dapat mencari dokter melalui kolom pencarian.
         ![dokter1](https://github.com/user-attachments/assets/1de3f1fb-1826-417e-a224-f4e6f1c7a79c)
       - Pilih dokter yang Anda inginkan dengan mengklik tombol Pilih Dokter.
       - Setelah itu akan menampilkkan jadwal dokter yang tersedia.
