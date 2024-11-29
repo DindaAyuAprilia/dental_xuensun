@@ -93,17 +93,10 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
       - Setelah itu akan menampilkkan jadwal dokter yang tersedia.
         ![jadwal](https://github.com/user-attachments/assets/21f2e5f7-41c1-42a4-a189-107e36873778)
 
-      - Klik tombol Pilih Jadwal untuk melanjutkan ke halaman formulir reservasi.
-
-    - Isi Formulir Reservasi
-      - Pada halaman ini, Pasien diminta untuk mengisi data berikut:
-        - Nama Lengkap
-        - Jenis Kelamin
-        - Waktu Janji Temu 
-        - Kondisi khusus, jika ada.
+      - Klik tombol Pilih Jadwal untuk melanjutkan ke form reservasi.
+      - jika berhasil akan menampilkan form reservasi. lalu klik tombol konfirmasi reservasi untuk mengonfirmasi reservasi
+       ![WhatsApp Image 2024-11-29 at 23 37 50](https://github.com/user-attachments/assets/c2ba89fa-447c-4acd-8add-48aae2ae00e7)
           
-    - Selesai
-      - Setelah semua data terisi, klik tombol Reservasi untuk menyimpan janji temu.
 
 ### B.	Dokter
 1.	Login dan Logout
