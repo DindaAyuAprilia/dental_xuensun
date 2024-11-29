@@ -26,26 +26,22 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
 1.	Login, Registrasi, Logout
     - Pengguna dapat login menggunakan akun yang sudah terdaftar. Jika belum memiliki akun, pengguna dapat mendaftar terlebih dahulu.
     - Pengguna dapat logout.
-3. Tentang Kami
-   ![tentang1](https://github.com/user-attachments/assets/9170c72c-9b24-4cf7-b40a-c0ca192f686f)
-   ![tentang2](https://github.com/user-attachments/assets/82cf8901-28b7-45f6-95c1-a91c0132fee5)
-   ![tentang3](https://github.com/user-attachments/assets/514fc614-b6aa-4d54-9902-87e5b0fcffbd)
-   ![tentang4](https://github.com/user-attachments/assets/10fcb90b-e7c8-4b0c-9cbb-07d05e949500)
+2. Tentang Kami
     - Pasien dapat melihat informasi tentang Dental Clinic XuenSun yang mencakup deskripsi singkat klinik, visi misi, dll.
-5. Layanan
+3. Layanan
     - Pengguna dapat melihat informasi dari layanan yang tersedia, yaitu nama layanan dan deskripsi layanan.
     - Pengguna dapat menggunakan fitur pencarian untuk mencari layanan yang diinginkan.
-6. Detail Layanan
+4. Detail Layanan
    - Pasien dapat melihat informasi dari layanan yang tersedia, yaitu nama layanan, deskripsi layanan dan harga layanan.
-7.	Membuat Janji Temu (Reservasi)
+5.	Membuat Janji Temu (Reservasi)
     - Pasien dapat membuat janji temu dengan dokter berdasarkan jadwal yang telah tersedia.
-8.	Manajemen Data Pasien
+6.	Manajemen Data Pasien
     - Admin dapat melihat data pasien yang sudah mengajukan reservasi dan memperbarui status reservasi.
-9.	Manajemen Data Dokter (CRUD)
+7.	Manajemen Data Dokter (CRUD)
     - Admin dan Pasien dapat melihat data dokter, seperti jadwal praktik.
-10.	Manajemen Layanan (CRUD)
+8.	Manajemen Layanan (CRUD)
     - Admin dapat menambah, melihat, mengubah, dan menghapus daftar layanan yang tersedia di klinik.
-11.	Read API
+9.	Read API
     - API sederhana tersedia untuk menampilkan informasi layanan klinik.
 
 ## Dokumentasi Penggunaan
@@ -65,6 +61,14 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
         
     - Logout
       - Klik tombol Logout di navigasi untuk keluar.
+        
+2. Melihat Menu Tentang Kami
+   ![tentang1](https://github.com/user-attachments/assets/9170c72c-9b24-4cf7-b40a-c0ca192f686f)
+   ![tentang2](https://github.com/user-attachments/assets/82cf8901-28b7-45f6-95c1-a91c0132fee5)
+   ![tentang3](https://github.com/user-attachments/assets/514fc614-b6aa-4d54-9902-87e5b0fcffbd)
+   ![tentang4](https://github.com/user-attachments/assets/10fcb90b-e7c8-4b0c-9cbb-07d05e949500)
+   - Klik menu Tentang Kami di navigasi utama.
+   - Setelah diklik akan menampikan informasi Dental Clinic XuenSun, seperti Visi Misi, dll.
 
 2.	Membuat Janji Temu
     - Pilih Layanan
