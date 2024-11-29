@@ -22,16 +22,19 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
     - Pengguna dapat login menggunakan akun yang sudah terdaftar. Jika belum memiliki akun, pengguna dapat mendaftar terlebih dahulu.
     - Pengguna dapat logout.
 2. Tentang Kami
-   - Pasien dapat melihat informasi tentang Dental Clinic XuenSun yang mencakup deskripsi singkat klinik, visi misi, dll.
-3.	Membuat Janji Temu (Reservasi)
+    - Pasien dapat melihat informasi tentang Dental Clinic XuenSun yang mencakup deskripsi singkat klinik, visi misi, dll.
+3. Layanan
+    - Pengguna dapat melihat informasi dari layanan yang tersedia, seperti nama layanan, deskripsi layanan, dan harga layanan.
+    - Pengguna dapat menggunakan fitur pencarian untuk mencari layanan yang diinginkan.
+4.	Membuat Janji Temu (Reservasi)
     - Pasien dapat membuat janji temu dengan dokter berdasarkan jadwal yang telah tersedia.
-4.	Manajemen Data Pasien
+5.	Manajemen Data Pasien
     - Admin dapat melihat data pasien yang sudah mengajukan reservasi dan memperbarui status reservasi.
-5.	Manajemen Data Dokter (CRUD)
+6.	Manajemen Data Dokter (CRUD)
     - Admin dan Pasien dapat melihat data dokter, seperti jadwal praktik.
-6.	Manajemen Layanan (CRUD)
+7.	Manajemen Layanan (CRUD)
     - Admin dapat menambah, melihat, mengubah, dan menghapus daftar layanan yang tersedia di klinik.
-7.	Read API
+8.	Read API
     - API sederhana tersedia untuk menampilkan informasi layanan klinik.
 
 ## Dokumentasi Penggunaan
@@ -84,30 +87,20 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
      - Status
 
 ### B.	Dokter
-1.	Login, Registrasi, dan Logout
+1.	Login dan Logout
     - Login
       - Masukkan email dan password pada halaman login.
       - Klik tombol Login untuk mengakses dashboard Dokter.
-
-    - Registrasi
-      - Pada halaman Login, klik tulisan Daftar.
-      - Isi formulir dengan informasi seperti nama, jenis kelamin, email, password, dan foto.
-      - Klik tombol Daftar untuk membuat akun baru.
 
     - Logout
       - Klik tombol Logout yang tersedia di navigasi untuk keluar.
 
 
 ### C.	Admin
-1.	Login, Registrasi, dan Logout
+1.	Login dan Logout
     - Login
       - Masukkan email dan password pada halaman login.
       - Klik tombol Masuk untuk mengakses dashboard Admin.
-
-    - Registrasi
-      - Pada halaman login, klik tombol Daftar.
-      - Isi formulir dengan informasi seperti nama, jenis kelamin, email, password, dan foto.
-      - Klik Daftar untuk membuat akun baru.
 
     - Logout
       - Klik tombol Logout yang tersedia di navigasi untuk keluar.
