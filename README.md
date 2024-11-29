@@ -114,6 +114,7 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
 ### B.	Dokter
 1.	Login dan Logout
     - Login
+      ![login](https://github.com/user-attachments/assets/8aec641f-41fe-4823-89e7-35077ca25dab)
       - Masukkan email dan password pada halaman login.
       - Klik tombol Login untuk mengakses dashboard Dokter.
 
@@ -124,6 +125,7 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
 ### C.	Admin
 1.	Login dan Logout
     - Login
+       ![login](https://github.com/user-attachments/assets/8aec641f-41fe-4823-89e7-35077ca25dab)
       - Masukkan email dan password pada halaman login.
       - Klik tombol Masuk untuk mengakses dashboard Admin.
 
