@@ -24,8 +24,6 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
 ![beranda3](https://github.com/user-attachments/assets/1b52f3bd-1438-403f-b8a8-f4e63ca326c2)
 ![beranda4](https://github.com/user-attachments/assets/408acf68-f9ad-4a3e-a86f-01f54a9aa3b8)
 
-# Beranda Admin
-
 ## Fitur Utama
 1.	Login, Registrasi, Logout
     - Pengguna dapat masuk menggunakan akun yang sudah terdaftar. Jika belum memiliki akun, pengguna dapat mendaftar terlebih dahulu.
@@ -39,12 +37,14 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
    - Pasien dapat melihat informasi dari layanan yang tersedia, yaitu nama layanan, deskripsi layanan dan harga layanan.
 5.	Membuat Janji Temu (Reservasi)
     - Pasien dapat membuat janji temu dengan dokter berdasarkan jadwal yang telah tersedia.
+    - Admin dapat melihat daftar reservasi dan dapat melakukan pencarian.
 6.	Manajemen Data Pasien
     - Admin dapat melihat data pasien yang sudah mengajukan reservasi dan memperbarui status reservasi.
-7.	Manajemen Data Dokter (CRUD)
-    - Admin dan Pasien dapat melihat data dokter, seperti jadwal praktik.
-8.	Manajemen Layanan (CRUD)
-    - Admin dapat menambah, melihat, mengubah, dan menghapus daftar layanan yang tersedia di klinik.
+7.	Manajemen Data Dokter
+    - Admin dapat melihat, menambah, mengubah, dan menghapus data dokter.
+    - Pasien dapat melihat data dokter, seperti nama, spesialis dan jadwal dokter.
+8. Manajemen Jadwal Dokter  (CRUD)
+   - Admin dapat melihat, menambah, mengubah, dan menghapus jadwal dokter.
 9.	Read API
     - API sederhana tersedia untuk menampilkan informasi layanan klinik.
 
@@ -134,7 +134,6 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
       - Klik tombol Masuk untuk mengakses dashboard Admin.
         ![WhatsApp Image 2024-11-29 at 22 21 12](https://github.com/user-attachments/assets/1d72d8ef-f90e-40b1-bee1-23d50569d4c9)
 
-
     - Logout
       - Klik tombol Keluar yang tersedia di navigasi untuk keluar.
 
@@ -177,12 +176,48 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
       - Konfirmasi penghapusan data dokter.
         ![WhatsApp Image 2024-11-29 at 22 24 40](https://github.com/user-attachments/assets/116573e1-6951-401d-a34a-66618313d333)
       - Data dokter akan dihapus dari sistem secara permanen.
+     
+4. Manajemen Jadwal Dokter (CRUD)
+   - Melihat Jadwal Dokter.
+      - Klik menu Jadwal di navigasi.
+      - Admin dapat melihat semua jadwal dokter melalui menu ini.
+        ![WhatsApp Image 2024-11-29 at 22 25 57](https://github.com/user-attachments/assets/e9036e91-17d9-4bae-9a72-6ce19674e3a3)
+      - Informasi yang ditampilkan mencakup:
+        - Nama dokter
+        - Spesialisasi
+        - Jadwal praktik
+
+    - Tambah Jadwal Dokter
+      - Klik tombol Tambah Jadwal di menu Jadwal.
+      - Isi formulir dengan informasi dokter, seperti:
+        - Nama lengkap dokter
+        - Hari
+        - Waktu mulai
+        - Waktu Selesai
+        ![WhatsApp Image 2024-11-29 at 22 26 34](https://github.com/user-attachments/assets/0b463582-059d-4860-8499-b009f073c119)
+        - Klik Simpan untuk menambahkan jadwal baru ke dalam sistem.
+
+    - Edit Jadwal Dokter 
+      - Pilih jadwal dokter yang ingin diubah datanya.
+      - Klik tombol Edit di sebelah jadwal dokter tersebut.
+      - Perbarui informasi yang diperlukan.
+        ![WhatsApp Image 2024-11-29 at 22 28 50](https://github.com/user-attachments/assets/ca77d0cb-3aa9-454f-a434-fb8dcd8dfefe)
+      - Klik Simpan untuk menyimpan perubahan.
+
+    - Hapus Jadwal Dokter 
+      - Pilih jadwal dokter yang ingin dihapus dari daftar.
+      - Klik tombol Hapus di sebelah informasi jadwal dokter tersebut.
+      - Konfirmasi penghapusan jadwal dokter.
+        
+      - Jadwal dokter akan dihapus dari sistem secara permanen.
+     
+5. Melihat Daftar Reservasi Pasien
+   - Klik menu Reservasi di navigasi.
+    - Admin dapat melihat semua daftar reservasi yang diajukan pasien.
+      ![WhatsApp Image 2024-11-29 at 22 28 12](https://github.com/user-attachments/assets/c859057b-5fe9-41c2-9e98-f1786f7d0b6d)
 
 
-![WhatsApp Image 2024-11-29 at 22 28 12](https://github.com/user-attachments/assets/c859057b-5fe9-41c2-9e98-f1786f7d0b6d)
-![WhatsApp Image 2024-11-29 at 22 25 57](https://github.com/user-attachments/assets/e9036e91-17d9-4bae-9a72-6ce19674e3a3)
-![WhatsApp Image 2024-11-29 at 22 28 50](https://github.com/user-attachments/assets/ca77d0cb-3aa9-454f-a434-fb8dcd8dfefe)
-![WhatsApp Image 2024-11-29 at 22 26 34](https://github.com/user-attachments/assets/0b463582-059d-4860-8499-b009f073c119)
+
 
 
 
