@@ -141,11 +141,15 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
 2.	Melihat Data Pasien
     - Klik menu Data Pasien di navigasi.
     - Admin dapat melihat semua data pasien melalui menu ini.
+      ![WhatsApp Image 2024-11-29 at 22 25 26](https://github.com/user-attachments/assets/9777ca11-588c-47be-93f5-4b3b9e383b67)
+
 
 3.	Manajemen Data Dokter (CRUD)
     - Melihat Data Dokter
       - Klik menu Data Dokter di navigasi
       - Admin dapat melihat semua data dokter melalui menu ini.
+        ![WhatsApp Image 2024-11-29 at 22 22 43](https://github.com/user-attachments/assets/2b7f3638-dd65-4e23-a013-985718618a22)
+        ![WhatsApp Image 2024-11-29 at 22 25 07](https://github.com/user-attachments/assets/646ebc1d-e203-40db-bf38-581c98fb19d9)
       - Informasi yang ditampilkan mencakup:
         - Nama dokter
         - Spesialisasi
@@ -157,44 +161,29 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
         - Nama lengkap
         - Spesialisasi
         - Jadwal praktik
+        ![WhatsApp Image 2024-11-29 at 22 23 01](https://github.com/user-attachments/assets/dc88cd1e-3119-41c1-8768-160900c023f9)
       - Klik Simpan untuk menambahkan dokter baru ke dalam sistem.
 
     - Edit Data Dokter 
       - Pilih dokter yang ingin diubah datanya.
       - Klik tombol Edit di sebelah informasi dokter tersebut.
       - Perbarui informasi yang diperlukan.
+        ![WhatsApp Image 2024-11-29 at 22 23 25](https://github.com/user-attachments/assets/d59ccf64-b580-4c55-862d-3f7f6d1637b3)
       - Klik Simpan untuk menyimpan perubahan.
 
     - Hapus Data Dokter 
       - Pilih dokter yang ingin dihapus dari daftar.
       - Klik tombol Hapus di sebelah informasi dokter tersebut.
       - Konfirmasi penghapusan data dokter.
+        ![WhatsApp Image 2024-11-29 at 22 24 40](https://github.com/user-attachments/assets/116573e1-6951-401d-a34a-66618313d333)
       - Data dokter akan dihapus dari sistem secara permanen.
 
-4.	Manajemen Layanan (CRUD)
-    - Melihat Data Layanan
-      - Klik salah satu card layanan di daftar untuk melihat detailnya.
-      - Informasi detail mencakup:
-        - Nama layanan
-        - Deskripsi lengkap
-        - Harga layanan
 
-    - Tambah Data Layanan 
-      - Klik tombol Tambah Layanan di menu Layanan.
-      - Isi formulir dengan informasi layanan, seperti:
-        - Nama layanan
-        - Deskripsi layanan
-        - Harga layanan
-      - Klik Simpan untuk menambahkan layanan baru ke dalam sistem.
+![WhatsApp Image 2024-11-29 at 22 28 12](https://github.com/user-attachments/assets/c859057b-5fe9-41c2-9e98-f1786f7d0b6d)
+![WhatsApp Image 2024-11-29 at 22 25 57](https://github.com/user-attachments/assets/e9036e91-17d9-4bae-9a72-6ce19674e3a3)
+![WhatsApp Image 2024-11-29 at 22 28 50](https://github.com/user-attachments/assets/ca77d0cb-3aa9-454f-a434-fb8dcd8dfefe)
+![WhatsApp Image 2024-11-29 at 22 26 34](https://github.com/user-attachments/assets/0b463582-059d-4860-8499-b009f073c119)
 
-    - Edit Data Layanan
-      - Pilih layanan yang ingin diubah datanya.
-      - Klik tombol Edit di sebelah informasi layanan tersebut.
-      - Perbarui informasi yang diperlukan.
-      - Klik Simpan untuk menyimpan perubahan.
 
-    - Hapus Data Layanan
-      - Pilih layanan yang ingin dihapus dari daftar.
-      - Klik tombol Hapus di sebelah informasi layanan tersebut.
-      - Konfirmasi penghapusan data layanan.
-      - Data layanan akan dihapus dari sistem secara permanen.
+
+
