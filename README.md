@@ -11,7 +11,7 @@
 
 ## Pembukaan
 Selamat Datang di Klinik XuenSun
-Dental Clinic Xuensun merupkan platform inovatif yang dirancang untuk memudahkan pengelolaan jadwal pasien, dokter, dan layanan klinik secara efisien. 
+Dental Clinic Xuensun merupakan platform inovatif yang dirancang untuk memudahkan pengelolaan jadwal pasien, dokter, dan layanan klinik secara efisien. 
 Dengan antarmuka berbasis web yang intuitif, Klinik XuenSun bertujuan untuk meningkatkan pengalaman baik bagi pengguna internal maupun eksternal, 
 memastikan setiap interaksi berjalan lancar dan terorganisir dengan baik. Selain itu, kami menyediakan fitur reservasi janji temu online, 
 yang memungkinkan Anda memilih waktu konsultasi yang sesuai dengan kebutuhan Anda tanpa harus datang langsung ke klinik.
