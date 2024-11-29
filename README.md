@@ -24,7 +24,7 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
 
 ## Fitur Utama
 1.	Login, Registrasi, Logout
-    - Pengguna dapat login menggunakan akun yang sudah terdaftar. Jika belum memiliki akun, pengguna dapat mendaftar terlebih dahulu.
+    - Pengguna dapat masuk menggunakan akun yang sudah terdaftar. Jika belum memiliki akun, pengguna dapat mendaftar terlebih dahulu.
     - Pengguna dapat logout.
 2. Tentang Kami
     - Pasien dapat melihat informasi tentang Dental Clinic XuenSun yang mencakup deskripsi singkat klinik, visi misi, dll.
@@ -50,17 +50,17 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
     - Login
       ![login](https://github.com/user-attachments/assets/8aec641f-41fe-4823-89e7-35077ca25dab)
       - Masukkan email dan password pada halaman login.
-      - Klik tombol Login untuk mengakses dashboard Pasien.
+      - Klik tombol Masuk untuk mengakses dashboard Pasien.
 
     - Registrasi
       ![registrasi1](https://github.com/user-attachments/assets/700aa576-005e-47f0-af94-bb7656dc4000)
   	  ![registrasi2](https://github.com/user-attachments/assets/9ae8efa1-5099-4a8b-afd0-e87e48cf39d5)
-      - Pada halaman login, klik tombol Registrasi.
+      - Pada halaman login, klik tombol Daftar.
       - Isi formulir dengan informasi seperti nama, jenis kelamin, email, password, dan foto.
       - Klik Daftar untuk membuat akun baru.
         
     - Logout
-      - Klik tombol Logout di navigasi untuk keluar.
+      - Klik tombol Keluar di navigasi untuk keluar.
         
 2. Melihat Menu Tentang Kami
    ![tentang1](https://github.com/user-attachments/assets/9170c72c-9b24-4cf7-b40a-c0ca192f686f)
@@ -82,7 +82,7 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
     - Pilih Dokter
       ![dokter1](https://github.com/user-attachments/assets/1de3f1fb-1826-417e-a224-f4e6f1c7a79c)
 
-      - Jika sudah Login, setelah klik tombol reservasi maka akan diarahkan ke halaman dokter.
+      - Jika sudah masuk, setelah klik tombol Reservasi maka akan diarahkan ke halaman dokter.
       - Daftar dokter yang tersedia untuk layanan tersebut akan ditampilkan lengkap dengan nama, spesialisasi, dan jadwal praktik dokter tersebut.
       - Pilih dokter yang Anda inginkan dengan mengklik tombol Pilih Dokter.
       - Setelah itu akan menampilkkan jadwal dokter yang tersedia.
@@ -116,10 +116,10 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
     - Login
       ![login](https://github.com/user-attachments/assets/8aec641f-41fe-4823-89e7-35077ca25dab)
       - Masukkan email dan password pada halaman login.
-      - Klik tombol Login untuk mengakses dashboard Dokter.
+      - Klik tombol Masuk untuk mengakses dashboard Dokter.
 
     - Logout
-      - Klik tombol Logout yang tersedia di navigasi untuk keluar.
+      - Klik tombol Keluar yang tersedia di navigasi untuk keluar.
 
 
 ### C.	Admin
@@ -130,7 +130,7 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
       - Klik tombol Masuk untuk mengakses dashboard Admin.
 
     - Logout
-      - Klik tombol Logout yang tersedia di navigasi untuk keluar.
+      - Klik tombol Keluar yang tersedia di navigasi untuk keluar.
 
 2.	Melihat Data Pasien
     - Klik menu Data Pasien di navigasi.
