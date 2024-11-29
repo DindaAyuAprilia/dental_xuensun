@@ -35,11 +35,12 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
     - Pengguna dapat menggunakan fitur pencarian untuk mencari layanan yang diinginkan.
 4. Detail Layanan
    - Pasien dapat melihat informasi dari layanan yang tersedia, yaitu nama layanan, deskripsi layanan dan harga layanan.
-5.	Membuat Janji Temu (Reservasi)
+5.	Manajemen Janji Temu (Reservasi)
     - Pasien dapat membuat janji temu dengan dokter berdasarkan jadwal yang telah tersedia.
-    - Admin dapat melihat daftar reservasi dan dapat melakukan pencarian.
+    - Admin dapat melihat daftar reservasi pasien dan dapat melakukan pencarian serta memperbarui status reservasi
+    - Dokter dapat melihat daftar reservasi pasien
 6.	Manajemen Data Pasien
-    - Admin dapat melihat data pasien yang sudah mengajukan reservasi dan memperbarui status reservasi.
+    - Admin dapat melihat data pasien 
 7.	Manajemen Data Dokter
     - Admin dapat melihat, menambah, mengubah, dan menghapus data dokter.
     - Pasien dapat melihat data dokter, seperti nama, spesialis dan jadwal dokter.
@@ -213,11 +214,4 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
     - Admin dapat melihat semua daftar reservasi yang diajukan pasien.
     - Admin dapat mengubah status reservasi pasien dengan memilih dari dropdown Aksi yang berisi Pending, Done, dan Reject, kemudian klik tombol Ubah Status.
       ![WhatsApp Image 2024-11-29 at 22 28 12](https://github.com/user-attachments/assets/c859057b-5fe9-41c2-9e98-f1786f7d0b6d)
-
-
-# Dokumentasi Admin Django:
-
-
-
-
 
