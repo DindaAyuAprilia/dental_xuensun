@@ -218,6 +218,7 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
       ![WhatsApp Image 2024-11-29 at 22 28 12](https://github.com/user-attachments/assets/c859057b-5fe9-41c2-9e98-f1786f7d0b6d)
 
 
+# Dokumentasi Admin Django:
 
 
 
