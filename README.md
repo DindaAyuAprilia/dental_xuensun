@@ -1,5 +1,6 @@
 # DENTAL CLINIC XUENSUN
 
+# Kelompok 12
 - Dinda Ayu Aprilia (2209106095)
 - Vista Mellyna Atsfi (2209106096)
 - Andi Zahrina Athirah Ahmad (2209106126)
@@ -10,7 +11,7 @@
 ![logo](https://github.com/user-attachments/assets/6f04f825-01ee-4fed-8674-f0b5f9756bcc)
 
 ## Pembukaan
-Selamat Datang di Klinik XuenSun
+Selamat Datang di Klinik XuenSun!
 Dental Clinic Xuensun merupakan platform inovatif yang dirancang untuk memudahkan pengelolaan jadwal pasien, dokter, dan layanan klinik secara efisien. 
 Dengan antarmuka berbasis web yang intuitif, Klinik XuenSun bertujuan untuk meningkatkan pengalaman baik bagi pengguna internal maupun eksternal, 
 memastikan setiap interaksi berjalan lancar dan terorganisir dengan baik. Selain itu, kami menyediakan fitur reservasi janji temu online, 
