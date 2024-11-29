@@ -18,143 +18,142 @@ yang memungkinkan Anda memilih waktu konsultasi yang sesuai dengan kebutuhan And
 
 ## Fitur Utama
 1.	Login, Registrasi, Logout
-o	Pengguna dapat login menggunakan akun yang sudah terdaftar.
-o	Jika belum memiliki akun, pengguna dapat mendaftar terlebih dahulu.
-o	Fitur logout tersedia untuk keluar dari sistem dengan aman.
+    - Pengguna dapat login menggunakan akun yang sudah terdaftar. Jika belum memiliki akun, pengguna dapat mendaftar terlebih dahulu.
+    - Fitur logout tersedia untuk keluar dari sistem dengan aman.
 2.	Manajemen Janji Temu
-o	Pasien dapat membuat janji temu dengan dokter berdasarkan jadwal yang tersedia.
-3.	Manajemen Data Pasien
-o	Admin dan Pasien dapat melihat data pasien, termasuk informasi pribadi dan riwayat kunjungan.
-4.	Manajemen Data Dokter
-o	Admin dan Pasien dapat melihat data dokter, seperti jadwal konsultasi dan spesialisasi.
-5.	Manajemen Rekam Medis
-o	Admin dapat mengakses dan mengelola rekam medis pasien secara digital, memastikan informasi medis tersimpan dengan aman dan mudah diakses.
-6.	Manajemen Layanan (CRUD)
-o	Admin dapat menambah, melihat, mengubah, dan menghapus daftar layanan yang tersedia di klinik.
-7.	Read API
-o	API sederhana tersedia untuk menampilkan informasi layanan klinik, memungkinkan integrasi dengan aplikasi atau platform lain.
+    - Pasien dapat membuat janji temu dengan dokter berdasarkan jadwal yang tersedia.
+4.	Manajemen Data Pasien
+    - Admin dan Pasien dapat melihat data pasien, termasuk informasi pribadi dan riwayat kunjungan.
+5.	Manajemen Data Dokter (CRUD)
+    - Admin dan Pasien dapat melihat data dokter, seperti jadwal konsultasi dan spesialisasi.
+6.	Manajemen Rekam Medis
+    - Admin dapat mengakses dan mengelola rekam medis pasien secara digital, memastikan informasi medis tersimpan dengan aman dan mudah diakses.
+7.	Manajemen Layanan (CRUD)
+    - Admin dapat menambah, melihat, mengubah, dan menghapus daftar layanan yang tersedia di klinik.
+8.	Read API
+    - API sederhana tersedia untuk menampilkan informasi layanan klinik, memungkinkan integrasi dengan aplikasi atau platform lain.
 
 ## Dokumentasi Penggunaan
 ### A.	Pasien
 1.	Login dan Registrasi
-•	Login
-- Masukkan email dan password pada halaman login.
-- Klik tombol Login untuk mengakses dashboard Pasien
+    - Login
+      - Masukkan email dan password pada halaman login.
+      - Klik tombol Login untuk mengakses dashboard Pasien
 
-•	Registrasi
-- Pada halaman login, klik tombol Registrasi.
-- Isi formulir dengan informasi seperti nama, email, dan password.
-- Klik Daftar untuk membuat akun baru.
-
-•	Logout
-- Klik tombol Logout yang tersedia di dashboard untuk keluar 
+    - Registrasi
+      - Pada halaman login, klik tombol Registrasi.
+      - Isi formulir dengan informasi seperti nama, email, dan password.
+      - Klik Daftar untuk membuat akun baru.
+        
+    - Logout
+      - Klik tombol Logout yang tersedia di dashboard untuk keluar 
 
 2.	Membuat Janji Temu
-•	Pilih Layanan
-- Klik menu Layanan di dashboard
-- Pilih layanan yang sesuai dengan kebutuhan Anda dari daftar layanan yang tersedia.
-- Klik tombol Reservasi di layanan yang dipilih.
+    - Pilih Layanan
+      - Klik menu Layanan di dashboard
+      - Pilih layanan yang sesuai dengan kebutuhan Anda dari daftar layanan yang tersedia.
+      - Klik tombol Reservasi di layanan yang dipilih.
 
-•	Pilih Dokter
-- Setelah klik reservasi, maka akan diarahkan ke halaman dokter.
-- Daftar dokter yang tersedia untuk layanan tersebut akan ditampilkan lengkap dengan nama, spesialisasi, dan jadwal konsultasi.-
-- Pilih dokter yang Anda inginkan dengan mengklik tombol Pilih Dokter di sebelah nama dokter.
+    - Pilih Dokter
+      - Setelah klik reservasi, maka akan diarahkan ke halaman dokter.
+      - Daftar dokter yang tersedia untuk layanan tersebut akan ditampilkan lengkap dengan nama, spesialisasi, dan jadwal konsultasi.-
+      - Pilih dokter yang Anda inginkan dengan mengklik tombol Pilih Dokter di sebelah nama dokter.
 
-•	Isi Formulir Reservasi
-- Setelah memilih dokter, maka akan diarahkan ke halaman formulir reservasi.
-- Isi data berikut pada formulir:
-  - Nama Lengkap
-  - Tanggal Janji Temu (pilih dari kalender yang tersedia).
-  - Waktu Janji Temu (pilih dari opsi yang tersedia sesuai jadwal dokter).
-•	Selesai
-- Setelah semua data terisi, klik tombol Reservasi untuk menyimpan janji temu.
+    - Isi Formulir Reservasi
+      - Setelah memilih dokter, maka akan diarahkan ke halaman formulir reservasi.
+      - Isi data berikut pada formulir:
+        - Nama Lengkap
+        - Tanggal Janji Temu (pilih dari kalender yang tersedia).
+        - Waktu Janji Temu (pilih dari opsi yang tersedia sesuai jadwal dokter).
+    - Selesai
+      - Setelah semua data terisi, klik tombol Reservasi untuk menyimpan janji temu.
 
 ### B.	Dokter
 1.	Login dan Registrasi
-•	Login
-- Masukkan email dan password pada halaman login.
-- Klik tombol Login untuk mengakses dashboard Dokter
+    - Login
+      - Masukkan email dan password pada halaman login.
+      - Klik tombol Login untuk mengakses dashboard Dokter
 
-•	Registrasi
-- Pada halaman login, klik tombol Registrasi.
-- Isi formulir dengan informasi seperti nama, email, dan password.
-- Klik Daftar untuk membuat akun baru.
+    - Registrasi
+      - Pada halaman login, klik tombol Registrasi.
+      - Isi formulir dengan informasi seperti nama, email, dan password.
+      - Klik Daftar untuk membuat akun baru.
 
-•	Logout
-- Klik tombol Logout yang tersedia di dashboard untuk keluar
+    - Logout
+      - Klik tombol Logout yang tersedia di dashboard untuk keluar
 
 
 ### C.	Admin
 1.	Login dan Registrasi
-•	Login
-- Masukkan email dan password pada halaman login.
-- Klik tombol Login untuk mengakses dashboard Admin
+    - Login
+      - Masukkan email dan password pada halaman login.
+      - Klik tombol Login untuk mengakses dashboard Admin
 
-•	Registrasi
-- Pada halaman login, klik tombol Registrasi.
-- Isi formulir dengan informasi seperti nama, email, dan password.
-- Klik Daftar untuk membuat akun baru.
+    - Registrasi
+      - Pada halaman login, klik tombol Registrasi.
+      - Isi formulir dengan informasi seperti nama, email, dan password.
+      - Klik Daftar untuk membuat akun baru.
 
-•	Logout
-- Klik tombol Logout yang tersedia di dashboard untuk keluar 
+    - Logout
+      - Klik tombol Logout yang tersedia di dashboard untuk keluar
 
 2.	Melihat Data Pasien
-- Klik menu Data Pasien di dashboard.
-- Admin dapat melihat semua data pasien melalui menu in.
+    - Klik menu Data Pasien di dashboard.
+    - Admin dapat melihat semua data pasien melalui menu in.
 
 3.	Manajemen Data Dokter (CRUD)
-•	Melihat Data Dokter
-- Klik menu Data Dokter di dashboard.
-- Admin dapat melihat semua data dokter melalui menu ini.
-- Informasi yang ditampilkan mencakup:
-  - Nama dokter
-  - Spesialisasi
-  - Jadwal konsultasi
+    - Melihat Data Dokter
+      - Klik menu Data Dokter di dashboard.
+      - Admin dapat melihat semua data dokter melalui menu ini.
+      - Informasi yang ditampilkan mencakup:
+        - Nama dokter
+        - Spesialisasi
+        - Jadwal konsultasi
 
-•	Tambah Data Dokter
-- Klik tombol Tambah Dokter di menu Data Dokter.
-- Isi formulir dengan informasi dokter, seperti:
-  - Nama lengkap
-  - Spesialisasi
-  - Jadwal konsultasi
-- Klik Simpan untuk menambahkan dokter baru ke dalam sistem.
+    - Tambah Data Dokter
+      - Klik tombol Tambah Dokter di menu Data Dokter.
+      - Isi formulir dengan informasi dokter, seperti:
+        - Nama lengkap
+        - Spesialisasi
+        - Jadwal konsultasi
+      - Klik Simpan untuk menambahkan dokter baru ke dalam sistem.
 
-•	Edit Data Dokter 
-- Pilih dokter yang ingin diubah datanya.
-- Klik tombol Edit di sebelah informasi dokter tersebut.
-- Perbarui informasi yang diperlukan.
-- Klik Simpan untuk menyimpan perubahan.
+    - Edit Data Dokter 
+      - Pilih dokter yang ingin diubah datanya.
+      - Klik tombol Edit di sebelah informasi dokter tersebut.
+      - Perbarui informasi yang diperlukan.
+      - Klik Simpan untuk menyimpan perubahan.
 
-•	Hapus Data Dokter 
-- Pilih dokter yang ingin dihapus dari daftar.
-- Klik tombol Hapus di sebelah informasi dokter tersebut.
-- Konfirmasi penghapusan data dokter.
-- Data dokter akan dihapus dari sistem secara permanen.
+    - Hapus Data Dokter 
+      - Pilih dokter yang ingin dihapus dari daftar.
+      - Klik tombol Hapus di sebelah informasi dokter tersebut.
+      - Konfirmasi penghapusan data dokter.
+      - Data dokter akan dihapus dari sistem secara permanen.
 
 4.	Manajemen Layanan (CRUD)
-•	Melihat Data Layanan
-- Klik salah satu card layanan di daftar untuk melihat detailnya.
-- Informasi detail mencakup:
-  - Nama layanan
-  - Deskripsi lengkap
-  - Harga layanan
+    - Melihat Data Layanan
+      - Klik salah satu card layanan di daftar untuk melihat detailnya.
+      - Informasi detail mencakup:
+        - Nama layanan
+        - Deskripsi lengkap
+        - Harga layanan
 
-•	Tambah Data Layanan 
-- Klik tombol Tambah Layanan di menu Layanan.
-- Isi formulir dengan informasi layanan, seperti:
-  - Nama layanan
-  - Deskripsi layanan
-  - Harga layanan
-- Klik Simpan untuk menambahkan layanan baru ke dalam sistem.
+    - Tambah Data Layanan 
+      - Klik tombol Tambah Layanan di menu Layanan.
+      - Isi formulir dengan informasi layanan, seperti:
+        - Nama layanan
+        - Deskripsi layanan
+        - Harga layanan
+      - Klik Simpan untuk menambahkan layanan baru ke dalam sistem.
 
-•	Edit Data Layanan
-- Pilih layanan yang ingin diubah datanya.
-- Klik tombol Edit di sebelah informasi layanan tersebut.
-- Perbarui informasi yang diperlukan.
-- Klik Simpan untuk menyimpan perubahan.
+    - Edit Data Layanan
+      - Pilih layanan yang ingin diubah datanya.
+      - Klik tombol Edit di sebelah informasi layanan tersebut.
+      - Perbarui informasi yang diperlukan.
+      - Klik Simpan untuk menyimpan perubahan.
 
-•	Hapus Data Layanan
-- Pilih layanan yang ingin dihapus dari daftar.
-- Klik tombol Hapus di sebelah informasi layanan tersebut.
-- Konfirmasi penghapusan data layanan.
-- Data layanan akan dihapus dari sistem secara permanen.
+    - Hapus Data Layanan
+      - Pilih layanan yang ingin dihapus dari daftar.
+      - Klik tombol Hapus di sebelah informasi layanan tersebut.
+      - Konfirmasi penghapusan data layanan.
+      - Data layanan akan dihapus dari sistem secara permanen.
