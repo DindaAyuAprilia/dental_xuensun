@@ -24,17 +24,19 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
 2. Tentang Kami
     - Pasien dapat melihat informasi tentang Dental Clinic XuenSun yang mencakup deskripsi singkat klinik, visi misi, dll.
 3. Layanan
-    - Pengguna dapat melihat informasi dari layanan yang tersedia, seperti nama layanan, deskripsi layanan, dan harga layanan.
+    - Pengguna dapat melihat informasi dari layanan yang tersedia, yaitu nama layanan dan deskripsi layanan.
     - Pengguna dapat menggunakan fitur pencarian untuk mencari layanan yang diinginkan.
-4.	Membuat Janji Temu (Reservasi)
+4. Detail Layanan
+   - Pasien dapat melihat informasi dari layanan yang tersedia, yaitu nama layanan, deskripsi layanan dan harga layanan.
+5.	Membuat Janji Temu (Reservasi)
     - Pasien dapat membuat janji temu dengan dokter berdasarkan jadwal yang telah tersedia.
-5.	Manajemen Data Pasien
+6.	Manajemen Data Pasien
     - Admin dapat melihat data pasien yang sudah mengajukan reservasi dan memperbarui status reservasi.
-6.	Manajemen Data Dokter (CRUD)
+7.	Manajemen Data Dokter (CRUD)
     - Admin dan Pasien dapat melihat data dokter, seperti jadwal praktik.
-7.	Manajemen Layanan (CRUD)
+8.	Manajemen Layanan (CRUD)
     - Admin dapat menambah, melihat, mengubah, dan menghapus daftar layanan yang tersedia di klinik.
-8.	Read API
+9.	Read API
     - API sederhana tersedia untuk menampilkan informasi layanan klinik.
 
 ## Dokumentasi Penggunaan
