@@ -1,6 +1,6 @@
 # DENTAL CLINIC XUENSUN
 
-# Kelompok 12
+## Kelompok 12
 - Dinda Ayu Aprilia (2209106095)
 - Vista Mellyna Atsfi (2209106096)
 - Andi Zahrina Athirah Ahmad (2209106126)
