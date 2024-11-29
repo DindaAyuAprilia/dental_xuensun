@@ -94,7 +94,7 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
         ![jadwal](https://github.com/user-attachments/assets/21f2e5f7-41c1-42a4-a189-107e36873778)
 
       - Klik tombol Pilih Jadwal untuk melanjutkan ke form reservasi.
-      - jika berhasil akan menampilkan form reservasi. lalu klik tombol konfirmasi reservasi untuk mengonfirmasi reservasi
+      - Jika berhasil akan menampilkan form reservasi. Lalu klik tombol Konfirmasi Reservasi untuk mengonfirmasi reservasi.
        ![WhatsApp Image 2024-11-29 at 23 37 50](https://github.com/user-attachments/assets/c2ba89fa-447c-4acd-8add-48aae2ae00e7)
           
 
@@ -141,16 +141,19 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
         ![WhatsApp Image 2024-11-29 at 22 22 43](https://github.com/user-attachments/assets/2b7f3638-dd65-4e23-a013-985718618a22)
         ![WhatsApp Image 2024-11-29 at 22 25 07](https://github.com/user-attachments/assets/646ebc1d-e203-40db-bf38-581c98fb19d9)
       - Informasi yang ditampilkan mencakup:
-        - Nama dokter
+        - Nama lengkap
+        - Email
         - Spesialisasi
-        - Jadwal praktik
+        - Nomor lisensi
 
     - Tambah Data Dokter
       - Klik tombol Tambah Dokter di menu Data Dokter.
       - Isi formulir dengan informasi dokter, seperti:
         - Nama lengkap
+        - Email
         - Spesialisasi
-        - Jadwal praktik
+        - Nomor lisensi
+        - Foto profil
         ![WhatsApp Image 2024-11-29 at 22 23 01](https://github.com/user-attachments/assets/dc88cd1e-3119-41c1-8768-160900c023f9)
       - Klik Simpan untuk menambahkan dokter baru ke dalam sistem.
 
@@ -174,10 +177,11 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
       - Admin dapat melihat semua jadwal dokter melalui menu ini.
         ![WhatsApp Image 2024-11-29 at 22 25 57](https://github.com/user-attachments/assets/e9036e91-17d9-4bae-9a72-6ce19674e3a3)
       - Informasi yang ditampilkan mencakup:
-        - Nama dokter
-        - Spesialisasi
-        - Jadwal praktik
-
+        - Nama lengkap dokter
+        - Hari
+        - Waktu mulai
+        - Waktu Selesai
+          
     - Tambah Jadwal Dokter
       - Klik tombol Tambah Jadwal di menu Jadwal.
       - Isi formulir dengan informasi dokter, seperti:
@@ -199,7 +203,6 @@ Dengan demikian, Anda hanya perlu datang ke klinik pada waktu yang telah dipilih
       - Pilih jadwal dokter yang ingin dihapus dari daftar.
       - Klik tombol Hapus di sebelah informasi jadwal dokter tersebut.
       - Konfirmasi penghapusan jadwal dokter.
-        
       - Jadwal dokter akan dihapus dari sistem secara permanen.
      
 5. Melihat Daftar Reservasi Pasien
