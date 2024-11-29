@@ -1,0 +1,68 @@
+{% load static %}
+{% load django_bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Beranda{% endblock %}</title>
+    {% bootstrap_css %}
+    <link href="{% static 'css/pribadi.css' %}" rel="stylesheet">
+</head>
+<body>
+    {% include 'layout/navbar.html' %}
+    {% block content %}
+
+    <!-- Card Utama -->
+    <div class="container-fluid p-0 full-screen" style="background-image: url('{{ welcome.background_image.url }}');">
+        <div class="xuen-welcome-card d-flex align-items-center justify-content-center custom-padding">
+            <div class="text-content">
+                <h1>{{ welcome.title }}</h1>
+                <p>{{ welcome.message }}</p>
+                <a href="#" class="btn btn-custom fw-bold">Lihat Layanan</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Deskripsi Klinik dan Layanan yang Tersedia -->
+    <div class="full-screen">
+        <div class="container-berada mt-5" style="padding-left: 10%;padding-right: 10%">
+            <div class="row mb-5" >
+                <div class="col-lg-6">
+                    <img src="{{ description.image.url }}" alt="Interior Clinic" class="img-fluid" style="border: 2px solid #3C2A21;border-radius: 10px">
+                </div>
+                <div class="col-lg-6">
+                    <div class="image-content mt-5 mb-3">
+                        <img src="{% static 'images/icon/xuensun.png' %}" alt="xuensun" style="border-radius: 10px;width: 70%; height: auto;">
+                    </div>
+                    <p>{{ description.content }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="full-screen">
+        <div class="container-berada mt-5" style="padding-left: 10%;padding-right: 10%">
+            <h2 class="text-center mb-5">Layanan yang Tersedia</h2>
+            <div class="row">
+                {% for service in services %}
+                <div class="col-md-3 mb-4 d-flex justify-content-center">
+                    <div class="card text-center" style="background-color: #f6eadc00;width: 80%;border: 2px solid #3C2A21;border-radius: 10px">
+                        <img src="{{ service.image.url }}" alt="{{ service.name }}" style="border-top-left-radius: 10px; border-top-right-radius: 10px;" >
+                        <div class="card-body">
+                            <p class="card-text">{{ service.name }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% include 'layout/footer.html' %}
+    {% endblock %}
+    {% bootstrap_javascript %}
+</body>
+</html>

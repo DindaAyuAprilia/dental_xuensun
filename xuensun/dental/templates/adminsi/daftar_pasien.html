@@ -1,0 +1,47 @@
+{% extends 'adminsi/index.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block title %} Data Pasien {% endblock %}
+{% block content %}
+
+<div class="full-screen">
+  <div class="container-fluid" style="padding-right: 10%;padding-left: 10%;">
+      <h1>Daftar Pasien</h1>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <div style="overflow-x:auto;">
+        <table class="table table-responsive" style="background-color: #C8B6A6; width: 100%; margin: 0 auto; table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Alamat</th>
+                    <th>Nomor Telepon</th>
+                    <th>Tanggal Lahir</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for patient in patients %}
+                <tr>
+                    <td style="word-wrap: break-word; white-space: normal;">{{ patient.name }}</td>
+                    <td style="word-wrap: break-word; white-space: normal;">{{ patient.email }}</td>
+                    <td style="word-wrap: break-word; white-space: normal;">{{ patient.gender }}</td>
+                    <td style="word-wrap: break-word; white-space: normal;">{{ patient.address }}</td>
+                    <td style="word-wrap: break-word; white-space: normal;">{{ patient.phone }}</td>
+                    <td style="word-wrap: break-word; white-space: normal;">{{ patient.dob }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="7" class="text-center">Tidak ada data pasien</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

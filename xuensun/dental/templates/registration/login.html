@@ -1,0 +1,71 @@
+{% load static %}
+{% load django_bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Login {% endblock %}</title>
+    {% bootstrap_css %}
+    <link href="{% static 'css/pribadi.css' %}" rel="stylesheet">
+</head>
+<body>
+{% block content %}
+
+
+    <div class="full-screen">
+        <div class="container-fluid" style="padding-right: 10%;padding-left: 10%;">
+            <div class="row text-center mb-3" style="align-items: flex-end;">
+                <div class="col-md-4">
+                    <h1 class="fw-bold">Masuk</h1>
+                </div>
+                <div class="col-md-4">
+                    <img src="{% static 'images/icon/xuen.png' %}" alt="xuen" class="img-fluid" style="max-height: 150px;">
+                </div>
+                <div class="col-md-4">
+                    <p>Belum Punya Akun? <a href="{% url 'register' %}" class="link-daftar">Daftar</a></p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-12" style="border: 2px solid #3C2A21; border-radius: 10px; background-color: #C8B6A6;padding:5%">
+                    <form method="post" novalidate>
+                        {% csrf_token %}
+
+                        <!-- Manually render the email field instead of using form.as_p -->
+                        <div class="mb-3">
+                            <label for="id_username" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="id_username" name="username" value="{{ form.username.value|default_if_none:'' }}" required>
+                            <div class="invalid-feedback">{{ form.username.errors }}</div>
+                        </div>
+
+                        <!-- Password Field -->
+                        <div class="mb-3">
+                            <label for="id_password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="id_password" name="password" required>
+                            <div class="invalid-feedback">{{ form.password.errors }}</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-custom fw-bold text-center">Masuk</button>
+                        
+                        <!-- Display errors below the fields -->
+                        <div class="alert alert-danger mt-3">
+                            <p> Pesan kesalahan: </p>
+                            <ul>
+                                {% for field in form %}
+                                    {% for error in field.errors %}
+                                        <li><strong>{{ field.label }}:</strong> {{ error }}</li>
+                                    {% endfor %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
+    {% bootstrap_javascript %}
+</body>
+</html>

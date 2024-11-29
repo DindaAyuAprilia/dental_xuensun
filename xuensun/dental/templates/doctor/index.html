@@ -1,0 +1,85 @@
+{% extends 'adminsi/index.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block title %} Data Dokter {% endblock %}
+{% block content %}
+
+<div class="full-screen">
+  <div class="container-fluid" style="padding-right: 10%;padding-left: 10%;">
+      <h1>Daftar Dokter</h1>
+      <a href="{% url 'doctor_create' %}" class="btn btn-custom mb-3">Tambah Dokter</a>
+
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <div style="overflow-x:auto;">
+        <table class="table table-responsive" style="background-color: #C8B6A6; width: 100%; margin: 0 auto; table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th>Foto</th> <!-- Menambahkan kolom Foto -->
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Spesialis</th>
+                    <th>Nomor Lisensi</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for doctor in doctors %}
+                <tr>
+                    <td style="word-wrap: break-word; white-space: normal;">
+                      <img src="{{ doctor.profile_photo.url }}" alt="Foto Profil" width="50" height="50" class="rounded-circle" style="margin-left:20%">
+                    </td>
+                    <td style="word-wrap: break-word; white-space: normal;">{{ doctor.name }}</td>
+                    <td style="word-wrap: break-word; white-space: normal;">{{ doctor.email }}</td>
+                    <td style="word-wrap: break-word; white-space: normal;">{{ doctor.specialty.name }}</td>
+                    <td style="word-wrap: break-word; white-space: normal;">{{ doctor.license_number }}</td>
+                    <td>
+                        <div class="d-flex" style="padding-right:20%">
+                            <a href="{% url 'doctor_update' doctor.id %}" class="btn btn-sm btn-warning me-1">Ubah</a>
+                            <button class="btn btn-sm btn-danger" onclick="confirmDelete({{ doctor.id }})">Hapus</button>
+                        </div>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="6" class="text-center">Tidak ada data dokter</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+      function confirmDelete(doctorId) {
+        Swal.fire({
+          title: 'Data dokter akan dihapus',
+          text: 'Data tidak akan bisa dikembalikan!',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Ya, Hapus!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            fetch(`/doctor/delete/${doctorId}/`, {
+              method: 'POST',
+              headers: {
+                'X-CSRFToken': '{{ csrf_token }}'
+              }
+            }).then(response => {
+              if (response.ok) {
+                Swal.fire('Deleted!', 'Data dokter telah dihapus.', 'success')
+                  .then(() => window.location.reload());
+              } else {
+                Swal.fire('Error!', 'Terjadi kesalahan saat menghapus data.', 'error');
+              }
+            });
+          }
+        });
+      }
+    </script>
+  </div>
+</div>
+
+{% endblock %}

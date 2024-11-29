@@ -1,0 +1,53 @@
+
+{% load static %}
+{% load django_bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Daftar Dokter{% endblock %}</title>
+    {% bootstrap_css %}
+    <link href="{% static 'css/pribadi.css' %}" rel="stylesheet">
+</head>
+<body>
+    {% include 'layout/navbar.html' %}
+    {% block content %}
+
+    <div class="full-screen">
+        <div class="container-berada mt-5" style="padding-left: 10%; padding-right: 10%">
+            <h1 class="fw-bold text-center mb-5 mt-5">Tim Dokter Dental Clinic XuenSun</h1>
+
+            <!-- Form Pencarian -->
+            <form method="get" class="mb-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="q" placeholder="Cari dokter..." value="{{ request.GET.q }}">
+                    <button class="btn btn-custom" type="submit">Cari</button>
+                </div>
+            </form>
+
+            <div class="row">
+                {% for dokter in dokter %}
+                <div class="col-md-4 mb-4 justify-content-center">
+                    <div class="card text-center service-card" style="background-color: #C8B6A6;border: 2px solid #3C2A21; border-radius: 10px;">
+                        <img src="{{ dokter.profile_photo.url }}" alt="{{ dokter.name }}">
+                        <div class="card-body" style="height:auto>
+                            <a href="{% url 'login' %}" class="text-decoration-none">
+                                <p class="card-text" style="color: #3C2A21">{{ dokter.specialty }}</p>
+                                <h3 class="card-text" style="color: #3C2A21">{{ dokter.name }}</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+    {% include 'layout/footer.html' %}
+    {% endblock %}
+    {% bootstrap_javascript %}
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% extends 'adminsi/index.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block title %} Tambah Dokter {% endblock %}
+{% block content %}
+
+<div class="full-screen">
+    <div class="container-fluid" style="padding-right: 10%;padding-left: 10%;">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <h1>Tambah Dokter</h1>
+            <a href="{% url 'doctor_index' %}" class="btn btn-custom">Kembali</a>
+        </div>
+
+        <form class="needs-validation" method="POST" enctype="multipart/form-data" novalidate>
+            {% csrf_token %}
+            {% include 'doctor/form.html' %}
+
+            {% if form.errors %}
+                <div class="alert alert-danger mt-3">
+                    <ul>
+                        {% for field in form %}
+                            {% for error in field.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </form>
+
+        <script>
+            function disableSubmitButton() {
+              document.getElementById('submitBtn').disabled = true; // Disable button to prevent double submit
+            }
+          </script>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,99 @@
+{% csrf_token %}
+<div class="row">
+    <div class="col-md-12 fw-bold" style="border: 2px solid #3C2A21; border-radius: 10px; background-color: #C8B6A6;padding:5%">
+        <div class="registration-box">
+
+            <!-- Name Field -->
+            <div class="mb-3">
+                <label for="id_name" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="id_name" name="name" value="{{ form.name.value|default_if_none:'' }}" required>
+                <div class="invalid-feedback">{{ form.name.errors }}</div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="mb-3">
+                <label for="id_email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="id_email" name="email" value="{{ form.email.value|default_if_none:'' }}" required>
+                <div class="invalid-feedback">{{ form.email.errors }}</div>
+            </div>
+
+            <!-- Gender Field -->
+            <div class="mb-3">
+                <label class="form-label">Jenis Kelamin</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="id_gender_male" value="Pria" {% if form.gender.value == 'Pria' %}checked{% endif %} required>
+                    <label class="form-check-label" for="id_gender_male">Pria</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="id_gender_female" value="Wanita" {% if form.gender.value == 'Wanita' %}checked{% endif %} required>
+                    <label class="form-check-label" for="id_gender_female">Wanita</label>
+                </div>
+                <div class="invalid-feedback">{{ form.gender.errors }}</div>
+            </div
+
+            <!-- Address Field -->
+            <div class="mb-3">
+                <label for="id_address" class="form-label">Alamat</label>
+                <textarea class="form-control" id="id_address" name="address" required>{{ form.address.value|default_if_none:'' }}</textarea>
+                <div class="invalid-feedback">{{ form.address.errors }}</div>
+            </div>
+
+            <!-- Phone Field -->
+            <div class="mb-3">
+                <label for="id_phone" class="form-label">Nomor Telepon</label>
+                <input type="tel" class="form-control" id="id_phone" name="phone" 
+                    value="{{ form.phone.value }}" required 
+                    pattern="62[0-9]{8,15}" 
+                    title="Nomor telepon harus dimulai dengan 62 diikuti oleh 8-15 angka." 
+                    placeholder="Contoh: 6282148188767"
+                    oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                <div class="invalid-feedback">{{ form.phone.errors }}</div>
+            </div>
+
+            <!-- DOB Field -->
+            <div class="mb-3">
+                <label for="id_dob" class="form-label">Tanggal Lahir</label>
+                <input type="date" class="form-control" id="id_dob" name="dob" value="{{ form.dob.value|default_if_none:'' }}" required 
+                    max="{{ today|date:'Y-m-d' }}">
+                <div class="invalid-feedback">{{ form.dob.errors }}</div>
+            </div>
+
+
+            <!-- Password Field (Only Show for Create) -->
+            <div class="mb-3">
+                <label for="id_password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="id_password" name="password" required>
+                <div class="invalid-feedback">{{ form.password.errors }}</div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-custom text-center">Daftar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('id_dob').addEventListener('input', function (event) {
+        const dobInput = event.target;
+        const today = new Date();
+        const oneYearAgo = new Date(today.setFullYear(today.getFullYear() - 1));
+        const dobValue = new Date(dobInput.value);
+
+        if (dobValue > oneYearAgo) {
+            dobInput.setCustomValidity("Tanggal lahir harus minimal satu tahun yang lalu.");
+        } else {
+            dobInput.setCustomValidity(""); // Clear custom validity message
+        }
+    });
+
+    // Validasi password kosong sebelum form disubmit
+    document.querySelector('form').addEventListener('submit', function(event) {
+        const passwordField = document.getElementById('id_password');
+        if (passwordField && passwordField.value.trim() === '') {
+            event.preventDefault();  // Hentikan form dari submit
+            alert('Password tidak boleh kosong.');
+            passwordField.focus(); // Fokuskan pada field password
+        }
+    });
+</script>

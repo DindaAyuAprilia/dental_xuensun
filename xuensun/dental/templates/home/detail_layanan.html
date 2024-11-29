@@ -1,0 +1,62 @@
+{% load static %}
+{% load django_bootstrap5 %}
+{% load humanize %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Layanan</title>
+    {% bootstrap_css %}
+    <link href="{% static 'css/pribadi.css' %}" rel="stylesheet">
+</head>
+<body>
+    {% include 'layout/navbar.html' %}
+    {% block content %}
+
+    <div class="full-screen justify-content-center">
+        <div class="container-berada" style="padding-left: 10%; padding-right: 10%">
+            <h1 class="fw-bold text-center">{{ services.name }}</h1>
+            <div class="text-center mt-3">
+                <a href="" class="btn btn-custom fw-bold justify-content-center" type="submit">Reservasi Sekarang!</a>
+            </div>  
+            <h1  class="fw-bold text-center mb-5"> ___________________________________________ </h1>
+
+            <div class="row ">
+                <div class="col-md-4 mb-4 justify-content-center">
+                    <div class="card text-center" style="background-color: #C8B6A6; min-width: 40%; border: 2px solid #3C2A21; border-radius: 10px;">
+                        <img src="{{ services.image.url }}" alt="{{ services.name }}" class="img-fluid" style="border-top-left-radius: 5px; border-top-right-radius: 5px;">
+                        <h4 class="mt-2">Rp {{ services.price|floatformat:0|intcomma }}</h4>
+                        <div class="card-body" style="height:auto">
+                            <p>{{ services.description }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4 d-flex justify-content-center" style="padding-left: 10%;">
+                    <div class="row-md-7">
+                        <h3 class="fw-bold"> Kapan kamu perlu melakukan perawatan ini? </h3>
+                        <ul class="mb-5">
+                            {% for item in need %}
+                                <li>{{ item|capfirst }}</li>
+                            {% endfor %}
+                        </ul>
+
+                        <h3 class="fw-bold mb-3"> Manfaat Melakukan Perawatan Ini </h3>
+                        <ul>
+                            {% for item in benefit %}
+                                <li>{{ item|capfirst }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'layout/footer.html' %}
+    {% endblock %}
+    {% bootstrap_javascript %}
+</body>
+</html>

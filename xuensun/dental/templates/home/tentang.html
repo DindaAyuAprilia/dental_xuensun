@@ -1,0 +1,85 @@
+{% load static %}
+{% load django_bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Tentang Kami{% endblock %}</title>
+    {% bootstrap_css %}
+    <link href="{% static 'css/pribadi.css' %}" rel="stylesheet">
+</head>
+<body>
+    {% include 'layout/navbar.html' %}
+    {% block content %}
+
+    <!-- Card Utama -->
+    <div class="container-fluid p-0 full-screen" style="background-image: url('{{ welcome.background_image.url }}');">
+        <div class="xuen-welcome-card d-flex align-items-center justify-content-center custom-padding" style="background-color: #f6eadcc6;padding-left: 10%;padding-right: 10% ; color:#3C2A21">
+            <div class="text-content">
+                <div class="text-center image-content mt-5 mb-5">
+                    <img src="{% static 'images/icon/xuensun.png' %}" alt="Xuensun Logo" style="border-radius: 10px; width: 70%; height: auto;">
+                </div>
+                <div class="text-content text-center">
+                    <p>{{ welcome.message }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Visi Misi -->
+    <div class="full-screen">
+        <div class="container-berada mt-5" style="padding-left: 10%;padding-right: 10%">
+            <div class="row mb-5" style="border: 2px solid #3C2A21;border-radius: 20px">
+                <div class="col-lg-6 mb-3 mt-3">
+                    <img src="{{ description.image.url }}" alt="Interior Clinic" class="img-fluid" style="border-radius: 20px;">
+                </div>
+                <div class="col-lg-6 mb-3 mt-3">
+                    <h1>{{ description.title }}</h1>
+                    <p>{{ description.content }}</p>
+                </div>
+            </div>
+            <div class="row mb-5" style="border: 2px solid #3C2A21;border-radius: 20px">
+                <div class="col-lg-6 mb-3 mt-3">
+                    <h1>{{ description1.title }}</h1>
+                    <ul>
+                        {% for item in misi_content %}
+                            <li>{{ item|capfirst }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-lg-6 mb-3 mt-3">
+                    <img src="{{ description1.image.url }}" alt="Interior Clinic" class="img-fluid" style="border-radius: 20px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Kenapa Kami -->
+    <div class="container-fluid p-0 full-screen" style="background-image: url('{{ welcome.background_image.url }}');">
+        <div class="xuen-welcome-card d-flex align-items-center justify-content-center custom-padding" style="background-color: #f6eadcc6;padding-left: 10%;padding-right: 10% ; color:#3C2A21">
+            <div class="row">
+                <div class="col-lg-6 mb-3 mt-3">
+                    <img src="{{ description2.image.url }}" alt="Interior Clinic" class="img-fluid" style="border-radius: 20px;height: auto; width: 80%;border: 2px solid #3C2A21;border-radius: 20px">
+                </div>
+                <div class="col-lg-6 mb-3 mt-3">
+                    <h1 class="mb-5">{{ description2.title }}</h1>
+                    <ul>
+                        {% for item in misi_content2 %}
+                            <li>{{ item|capfirst }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {% include 'layout/footer.html' %}
+    {% endblock %}
+    {% bootstrap_javascript %}
+</body>
+</html>
