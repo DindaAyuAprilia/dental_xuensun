@@ -1,0 +1,35 @@
+{% extends 'adminsi/index.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block title %} Ubah Jadwal {% endblock %}
+{% block content %}
+
+<div class="full-screen">
+    <div class="container-fluid" style="padding-right: 10%;padding-left: 10%;">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <h1>Ubah Jadwal: {{ schedule.doctor.name }} - {{ schedule.day }}</h1>
+            <a href="{% url 'schedule_index' %}" class="btn btn-custom">Kembali</a>
+        </div>
+
+        <form method="POST">
+            {% csrf_token %}
+            {% include 'schedule/form.html' %}
+
+            {% if form.errors %}
+                <div class="alert alert-danger mt-3">
+                    <ul>
+                        {% for field in form %}
+                            {% for error in field.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}

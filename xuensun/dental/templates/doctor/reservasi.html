@@ -1,0 +1,50 @@
+{% extends 'doctor/utama.html' %}  
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block title %} Riwayat Reservasi Saya {% endblock %}
+
+{% block content %}
+<div class="full-screen">
+  <div class="container-fluid" style="padding-right: 10%; padding-left: 10%;">
+    <h1>Riwayat Reservasi Saya</h1>
+
+    <!-- Pemberitahuan pesan (jika ada) -->
+    {% if messages %}
+      <ul>
+        {% for message in messages %}
+          <li class="alert {{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <!-- Tabel Daftar Appointment -->
+    <div style="overflow-x:auto;">
+      <table class="table table-responsive" style="background-color: #C8B6A6; width: 100%; margin: 0 auto; table-layout: fixed;">
+        <thead>
+          <tr>
+            <th>Nama Pasien</th>
+            <th>Dokter</th>
+            <th>Tanggal Waktu</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for appointment in appointments %}
+          <tr>
+            <td>{{ appointment.patient.name }}</td>
+            <td>{{ appointment.schedule.doctor.name }}</td>
+            <td>{{ appointment.appointment_date }}</td>
+            <td>{{ appointment.get_status_display }}</td>
+          </tr>
+          {% empty %}
+          <tr>
+            <td colspan="5" class="text-center">Tidak ada data appointment</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

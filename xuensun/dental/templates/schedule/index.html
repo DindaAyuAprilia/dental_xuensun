@@ -1,0 +1,89 @@
+{% extends 'adminsi/index.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block title %} Data Jadwal Dokter {% endblock %}
+{% block content %}
+
+<div class="full-screen mb-5">
+  <div class="container-fluid" style="padding-right: 10%;padding-left: 10%;">
+      <h1>Daftar Jadwal Dokter</h1>
+      <a href="{% url 'schedule_create' %}" class="btn btn-custom mb-3">Tambah Jadwal</a>
+
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+      <form method="GET" action="{% url 'schedule_index' %}" class="mb-3">
+        <div class="input-group">
+            <input type="text" class="form-control" name="q" placeholder="Cari dokter atau hari..." value="{{ query }}">
+            <button class="btn btn-custom" type="submit">Cari</button>
+        </div>
+    </form>
+    
+    <div style="overflow-x:auto;">
+        <table class="table table-responsive" style="background-color: #C8B6A6; width: 100%; margin: 0 auto; table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th>Dokter</th>
+                    <th>Hari</th>
+                    <th>Waktu Mulai</th>
+                    <th>Waktu Selesai</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for schedule in schedules %}
+                <tr>
+                    <td>{{ schedule.doctor.name }}</td>
+                    <td>{{ schedule.day }}</td>
+                    <!-- Format time_start and time_end -->
+                    <td>{{ schedule.time_start|date:"H:i" }}</td>
+                    <td>{{ schedule.time_end|date:"H:i" }}</td>
+                    <td>
+                        <div class="d-flex" style="padding-right:20%">
+                            <a href="{% url 'schedule_update' schedule.id %}" class="btn btn-sm btn-warning me-1">Ubah</a>
+                            <button class="btn btn-sm btn-danger" onclick="confirmDelete({{ schedule.id }})">Hapus</button>
+                        </div>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="5" class="text-center">Tidak ada data jadwal</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+      function confirmDelete(scheduleId) {
+        Swal.fire({
+          title: 'Jadwal dokter akan dihapus',
+          text: 'Jadwal tidak akan bisa dikembalikan!',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Ya, Hapus!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            fetch(`/schedule/delete/${scheduleId}/`, {
+              method: 'POST',
+              headers: {
+                'X-CSRFToken': '{{ csrf_token }}'
+              }
+            }).then(response => {
+              if (response.ok) {
+                Swal.fire('Deleted!', 'Jadwal dokter telah dihapus.', 'success')
+                  .then(() => window.location.reload());
+              } else {
+                Swal.fire('Error!', 'Terjadi kesalahan saat menghapus data.', 'error');
+              }
+            });
+          }
+        });
+      }
+    </script>
+  </div>
+</div>
+
+{% endblock %}

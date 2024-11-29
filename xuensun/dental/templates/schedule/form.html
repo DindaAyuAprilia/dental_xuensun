@@ -1,0 +1,111 @@
+<div class="row">
+    <div class="col-md-12 fw-bold" style="border: 2px solid #3C2A21; border-radius: 10px; background-color: #C8B6A6;padding:5%">
+        <div class="registration-box">
+
+
+            <div class="mb-3">
+                <label for="id_doctor" class="form-label">Dokter</label>
+                <select class="form-select" id="id_doctor" name="doctor" required>
+                    {% for doctor in form.doctor.field.queryset %}
+                    <option value="{{ doctor.id }}" {% if doctor.id == form.doctor.value %}selected{% endif %}>
+                        {{ doctor.name }}
+                    </option>
+                    {% endfor %}
+                </select>
+                {% if form.doctor.errors %}
+                <div class="text-danger">{{ form.doctor.errors }}</div>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_day" class="form-label">Hari</label>
+                <select class="form-select" id="id_day" name="day" required>
+                    {% for day in form.day.field.choices %}
+                    <option value="{{ day.0 }}" {% if day.0 == form.day.value %}selected{% endif %}>{{ day.1 }}</option>
+                    {% endfor %}
+                </select>
+                {% if form.day.errors %}
+                <div class="text-danger">{{ form.day.errors }}</div>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_time_start" class="form-label">Waktu Mulai</label>
+                <select class="form-select" id="id_time_start" name="time_start" required>
+                    {% for value, label in form.time_start.field.choices %}
+                        <option value="{{ value }}" {% if value == form.time_start.value %}selected{% endif %}>{{ label }}</option>
+                    {% endfor %}
+                </select>
+                {% if form.time_start.errors %}
+                <div class="text-danger">{{ form.time_start.errors }}</div>
+                {% endif %}
+            </div>
+            
+            <div class="mb-3">
+                <label for="id_time_end" class="form-label">Waktu Selesai</label>
+                <select class="form-select" id="id_time_end" name="time_end" required>
+                    {% for value, label in form.time_end.field.choices %}
+                        <option value="{{ value }}" {% if value == form.time_end.value %}selected{% endif %}>{{ label }}</option>
+                    {% endfor %}
+                </select>
+                {% if form.time_end.errors %}
+                <div class="text-danger">{{ form.time_end.errors }}</div>
+                {% endif %}
+            </div>
+            
+
+
+
+            <button type="submit" class="btn btn-custom">Simpan</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+        const doctorField = document.getElementById('id_doctor');
+        const dayField = document.getElementById('id_day');
+        const timeStartField = document.getElementById('id_time_start');
+        const timeEndField = document.getElementById('id_time_end');
+    
+        // Get the form data
+        const doctorId = doctorField.value;
+        const day = dayField.value;
+        const timeStart = timeStartField.value;
+        const timeEnd = timeEndField.value;
+    
+        if (doctorId && day && timeStart && timeEnd) {
+            // Convert timeStart and timeEnd to Date objects for comparison
+            const [startHour, startMinute] = timeStart.split(':').map(Number);
+            const [endHour, endMinute] = timeEnd.split(':').map(Number);
+            
+            const timeStartObj = new Date();
+            const timeEndObj = new Date();
+            
+            timeStartObj.setHours(startHour, startMinute, 0, 0);
+            timeEndObj.setHours(endHour, endMinute, 0, 0);
+            
+            // Check if time_end is later than time_start
+            if (timeEndObj <= timeStartObj) {
+                event.preventDefault();  // Prevent form from being submitted
+                alert('Waktu selesai harus lebih lama dari waktu mulai.');
+                timeEndField.focus();  // Focus on the end time field for correction
+                return;
+            }
+
+            // Fetch the existing schedules for this doctor and day
+            fetch(`/check-schedule/?doctor_id=${doctorId}&day=${day}&time_start=${timeStart}&time_end=${timeEnd}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.overlap) {
+                        event.preventDefault();  // Prevent form from being submitted
+                        alert('Dokter sudah memiliki jadwal yang tumpang tindih pada waktu tersebut.');
+                        timeStartField.focus();  // Focus on the start time field for correction
+                    }
+                })
+                .catch(error => {
+                    console.error('Error checking schedule overlap:', error);
+                });
+        }
+    });
+</script>

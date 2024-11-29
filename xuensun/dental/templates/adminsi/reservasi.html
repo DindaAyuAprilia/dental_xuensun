@@ -1,0 +1,74 @@
+{% extends 'adminsi/index.html' %}  
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block title %} Daftar Reservasi {% endblock %}
+
+{% block content %}
+<div class="full-screen">
+  <div class="container-fluid" style="padding-right: 10%; padding-left: 10%;">
+    <h1>Daftar Reservasi</h1>
+
+    <!-- Pemberitahuan pesan (jika ada) -->
+    {% if messages %}
+      <ul>
+        {% for message in messages %}
+          <li class="alert {{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <!-- Form Pencarian -->
+    <form method="GET" action="{% url 'appointment_list' %}" class="mb-3">
+      <div class="input-group">
+        <input type="text" class="form-control" name="q" placeholder="Cari reservasi..." value="{{ query }}">
+        <button class="btn btn-custom" type="submit">Cari</button>
+      </div>
+    </form>
+
+    <!-- Tabel Daftar Appointment -->
+    <div style="overflow-x:auto;">
+      <table class="table table-responsive" style="background-color: #C8B6A6; width: 100%; margin: 0 auto; table-layout: fixed;">
+        <thead>
+          <tr>
+            <th>Nama Pasien</th>
+            <th>Dokter</th>
+            <th>Tanggal Waktu</th>
+            <th>Status</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for appointment in appointments %}
+          <tr>
+            <td style="word-wrap: break-word; white-space: normal;">{{ appointment.patient.name }}</td>
+            <td style="word-wrap: break-word; white-space: normal;">{{ appointment.schedule.doctor.name }}</td>
+            <td style="word-wrap: break-word; white-space: normal;">{{ appointment.appointment_date }}</td>
+            <td style="word-wrap: break-word; white-space: normal;">
+              {{ appointment.get_status_display }}
+            </td>
+            <td>
+              <!-- Form untuk mengubah status appointment -->
+              <form method="POST" action="{% url 'appointment_list' %}">
+                {% csrf_token %}
+                <input type="hidden" name="appointment_id" value="{{ appointment.id }}">
+                <select name="status">
+                  <option value="Pending" {% if appointment.status == 'Pending' %}selected{% endif %}>Pending</option>
+                  <option value="Done" {% if appointment.status == 'Done' %}selected{% endif %}>Done</option>
+                  <option value="Reject" {% if appointment.status == 'Reject' %}selected{% endif %}>Reject</option>
+                </select>
+                <button type="submit" class="btn btn-sm btn-warning">Ubah Status</button>
+              </form>
+            </td>
+          </tr>
+          {% empty %}
+          <tr>
+            <td colspan="5" class="text-center">Tidak ada data appointment</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

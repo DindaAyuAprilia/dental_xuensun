@@ -89,8 +89,8 @@ class ServicesAdmin(admin.ModelAdmin):
     search_fields = ('name',)
 
 class AppointmentAdmin(admin.ModelAdmin):
-    list_display = ('patient', 'doctor', 'appointment_date', 'status')
-    list_filter = ('status', 'appointment_date')
+    list_display = ('patient', 'schedule', 'status')
+    list_filter = ('status', 'schedule')
     search_fields = ('patient__name', 'doctor__user__name')
 
 class MedicalRecordAdmin(admin.ModelAdmin):

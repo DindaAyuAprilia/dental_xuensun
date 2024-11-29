@@ -1,25 +1,17 @@
+{% extends 'layout/index.html' %}
 {% load static %}
 {% load django_bootstrap5 %}
 {% load humanize %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Layanan</title>
-    {% bootstrap_css %}
-    <link href="{% static 'css/pribadi.css' %}" rel="stylesheet">
-</head>
-<body>
-    {% include 'layout/navbar.html' %}
-    {% block content %}
+
+{% block title %} Detail Layanan {% endblock %}
+{% block content %}
 
     <div class="full-screen justify-content-center">
         <div class="container-berada" style="padding-left: 10%; padding-right: 10%">
             <h1 class="fw-bold text-center">{{ services.name }}</h1>
             <div class="text-center mt-3">
-                <a href="" class="btn btn-custom fw-bold justify-content-center" type="submit">Reservasi Sekarang!</a>
+                <a href="{% url 'dokter' services.id %}" class="btn btn-custom fw-bold justify-content-center" type="submit">Reservasi Sekarang!</a>
             </div>  
             <h1  class="fw-bold text-center mb-5"> ___________________________________________ </h1>
 
@@ -55,8 +47,6 @@
         </div>
     </div>
 
-    {% include 'layout/footer.html' %}
-    {% endblock %}
-    {% bootstrap_javascript %}
-</body>
-</html>
+{% endblock %}
+{% bootstrap_javascript %}
+

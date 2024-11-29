@@ -12,6 +12,14 @@
 
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
+      <!-- Form Pencarian -->
+      <form method="GET" action="{% url 'doctor_index' %}" class="mb-3">
+        <div class="input-group">
+            <input type="text" class="form-control" name="q" placeholder="Cari dokter atau spesialis..." value="{{ query }}">
+            <button class="btn btn-custom" type="submit">Cari</button>
+        </div>
+    </form>
+    
     <div style="overflow-x:auto;">
         <table class="table table-responsive" style="background-color: #C8B6A6; width: 100%; margin: 0 auto; table-layout: fixed;">
             <thead>

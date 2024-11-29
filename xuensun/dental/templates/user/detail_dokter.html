@@ -1,0 +1,36 @@
+{% extends 'adminsi/index.html' %}
+{% load static %}
+{% load humanize %}
+{% load django_bootstrap5 %}
+{% block title %} Detail Dokter {% endblock %}
+    {% block content %}
+
+    <div class="full-screen justify-content-center">
+        <div class="container-berada" style="padding-left: 10%; padding-right: 10%">
+            <h1 class="fw-bold text-center">{{ dokter.name }}</h1>
+            <div class="text-center mt-3">
+                <p>{{ dokter.specialty.name }}</p>
+                <img src="{{ dokter.profile_photo.url }}" alt="{{ dokter.name }}" class="img-fluid" style="max-width: 200px;">
+            </div>
+            
+            <h2 class="mt-5">Jadwal Tersedia</h2>
+            <div class="row">
+                {% for j in jadwal %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card text-center" style="background-color: #C8B6A6; border: 2px solid #3C2A21; border-radius: 10px;">
+                            <div class="card-body">
+                                <h4 class="card-title">{{ j.day }} - {{ j.time_start }} to {{ j.time_end }}</h4>
+                                <a href="{% url 'form_reservasi' dokter.id j.id services.id %}?email={{ request.user.email }}" class="btn btn-custom fw-bold">Pilih Jadwal</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% include 'layout/footer.html' %}
+    {% endblock %}
+    {% bootstrap_javascript %}
+</body>
+</html>

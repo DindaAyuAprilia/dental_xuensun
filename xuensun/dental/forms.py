@@ -63,4 +63,62 @@ class DoctorForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields['profile_photo'].widget.attrs.update({'class': 'form-control'})
 
-   
+
+
+# ================================ Jadwal ==========================
+from .models.data.jadwal import Schedule
+from django.core.exceptions import ValidationError
+from datetime import time
+
+class ScheduleForm(forms.ModelForm):
+    class Meta:
+        model = Schedule
+        fields = '__all__'
+
+    doctor = forms.ModelChoiceField(queryset=Doctor.objects.all(), required=True)
+    day = forms.ChoiceField(choices=[('Monday', 'Monday'), ('Tuesday', 'Tuesday'), 
+                                     ('Wednesday', 'Wednesday'), ('Thursday', 'Thursday'), 
+                                     ('Friday', 'Friday')], required=True)
+    
+    # Time choices (from 08:00 to 17:00)
+    TIME_CHOICES = [(f"{hour:02d}:00", f"{hour:02d}:00") for hour in range(8, 18)]
+    time_start = forms.ChoiceField(choices=TIME_CHOICES, required=True)
+    time_end = forms.ChoiceField(choices=TIME_CHOICES, required=True)
+
+    def clean(self):
+        cleaned_data = super().clean()
+        doctor = cleaned_data.get('doctor')
+        day = cleaned_data.get('day')
+        time_start = cleaned_data.get('time_start')
+        time_end = cleaned_data.get('time_end')
+
+        # Pastikan time_start dan time_end adalah objek time, bukan string
+        if time_start and time_end:
+            # Convert string time to datetime.time objects
+            time_start_obj = time(*map(int, time_start.split(':')))
+            time_end_obj = time(*map(int, time_end.split(':')))
+
+            # Validasi agar waktu selesai lebih lama dari waktu mulai
+            if time_end_obj <= time_start_obj:
+                raise ValidationError("Waktu selesai harus lebih lama dari waktu mulai.")
+
+        # Check jika dokter sudah memiliki jadwal di hari dan waktu yang dipilih
+        if doctor and day and time_start and time_end:
+            overlapping_schedules = Schedule.objects.filter(
+                doctor=doctor,
+                day=day
+            ).exclude(
+                id=self.instance.id  # Exclude instance saat update
+            )
+
+            # Cek tumpang tindih waktu
+            for schedule in overlapping_schedules:
+                schedule_start = schedule.time_start
+                schedule_end = schedule.time_end
+
+                # Cek apakah waktu yang baru tumpang tindih dengan jadwal yang ada
+                if (time_start_obj < schedule_end and time_end_obj > schedule_start):
+                    raise ValidationError(f"Dokter {doctor.name} sudah memiliki jadwal pada {day} "
+                                           f"pada rentang waktu {schedule_start} - {schedule_end}.")
+        
+        return cleaned_data

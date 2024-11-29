@@ -1,17 +1,7 @@
+{% extends 'layout/index.html' %}
 {% load static %}
 {% load django_bootstrap5 %}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Tentang Kami{% endblock %}</title>
-    {% bootstrap_css %}
-    <link href="{% static 'css/pribadi.css' %}" rel="stylesheet">
-</head>
-<body>
-    {% include 'layout/navbar.html' %}
+{% block title %} Tentang {% endblock %}
     {% block content %}
 
     <!-- Card Utama -->
@@ -78,8 +68,6 @@
     </div>
 
 
-    {% include 'layout/footer.html' %}
-    {% endblock %}
-    {% bootstrap_javascript %}
-</body>
-</html>
+{% include 'layout/footer.html' %}
+{% endblock %}
+  

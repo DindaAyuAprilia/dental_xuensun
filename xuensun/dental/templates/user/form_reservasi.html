@@ -1,0 +1,67 @@
+{% load static %}
+{% load django_bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Reservasi</title>
+    {% bootstrap_css %}
+    <link href="{% static 'css/pribadi.css' %}" rel="stylesheet">
+</head>
+<body>
+    {% include 'layout/navbar.html' %}
+    {% block content %}
+
+    <div class="full-screen justify-content-center">
+        <div class="container-berada" style="padding-left: 10%; padding-right: 10%">
+            <div class="card text-center service-card" style="background-color: #C8B6A6;border: 2px solid #3C2A21; border-radius: 10px;">
+            <h1 class="text-center">Form Reservasi</h1>
+
+            <!-- Menampilkan pesan error atau sukses -->
+            {% if messages %}
+                <div class="alert alert-warning">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <!-- Informasi Dokter dan Jadwal -->
+            <div class="text-center">
+                <h2>{{ dokter.name }}</h2>
+                <p class="text-muted">Spesialis: {{ dokter.specialty.name }}</p>
+                <p class="font-weight-bold">{{ jadwal.day }} - {{ jadwal.time_start }} to {{ jadwal.time_end }}</p>
+                <p>Pastikan jadwal Anda benar sebelum melanjutkan.</p>
+            </div>
+
+            <!-- Instruksi Screenshot -->
+            <div class="alert text-center" style="background-color: #F6EADC">
+                <h4><strong>Penting!</strong></h4>
+                <p>Sebelum melanjutkan, pastikan Anda telah meninjau jadwal di atas dan mengambil screenshot untuk referensi Anda.</p>
+                <p><strong>Ini penting untuk memastikan Anda tidak melewatkan jadwal.</strong></p>
+            </div>
+
+            <!-- Form untuk Konfirmasi Reservasi -->
+            <form method="post" class="text-center">
+                {% csrf_token %}
+                <div class="form-group">
+                    <button type="submit" class="btn btn-custom btn-lg">Konfirmasi Reservasi</button>
+                </div>
+            </form>
+
+            <!-- Tambahan: Info Kontak Dokter -->
+            <div class="mt-4">
+                <p class="text-center">Jika ada pertanyaan lebih lanjut, Anda bisa menghubungi dokter melalui:</p>
+                <p class="text-center"><strong>Email: </strong>XuenSun@gmail.com</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    {% include 'layout/footer.html' %}
+    {% endblock %}
+    {% bootstrap_javascript %}
+</body>
+</html>

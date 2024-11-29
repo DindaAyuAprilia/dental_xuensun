@@ -1,0 +1,43 @@
+{% extends 'doctor/utama.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block title %} Jadwal Dokter {% endblock %}
+
+{% block content %}
+<div class="full-screen">
+  <div class="container-fluid" style="padding-right: 10%; padding-left: 10%;">
+    <h1>Jadwal Saya</h1>
+
+    <!-- Tabel Daftar Jadwal Dokter -->
+    <div style="overflow-x:auto;">
+      <table class="table table-responsive" style="background-color: #C8B6A6; width: 100%; margin: 0 auto; table-layout: fixed;">
+        <thead>
+          <tr>
+            <th>Nama Dokter</th>
+            <th>Hari</th>
+            <th>Waktu Mulai</th>
+            <th>Waktu Selesai</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for schedule in schedules %}
+          <tr>
+            <td>{{ schedule.doctor.name }}</td>
+            <td>{{ schedule.day }}</td>
+            <td>{{ schedule.time_start }}</td>
+            <td>{{ schedule.time_end }}</td>
+          </tr>
+          {% empty %}
+          <tr>
+            <td colspan="5" class="text-center">Tidak ada data jadwal</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
