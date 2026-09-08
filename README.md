@@ -5,6 +5,217 @@
 - Vista Mellyna Atsfi (2209106096)
 - Andi Zahrina Athirah Ahmad (2209106126)
 
+## Tentang Project
+
+**Dental Clinic XuenSun** adalah sistem informasi klinik gigi berbasis web yang dikembangkan menggunakan **Django** untuk membantu digitalisasi proses pelayanan klinik, khususnya pengelolaan pasien, dokter, jadwal praktik, layanan, dan reservasi konsultasi.
+
+Project ini dikembangkan secara kolaboratif sebagai proyek akademik dengan menerapkan konsep **multi-role web application**, pengelolaan database relasional, authentication, CRUD, reservasi berbasis jadwal, serta REST API sederhana.
+
+Sistem menyediakan akses yang berbeda untuk **Pasien, Dokter, dan Admin** sesuai kebutuhan masing-masing pengguna.
+
+## Highlight Project
+
+Project ini tidak hanya berfungsi sebagai website informasi klinik, tetapi juga sebagai sistem pengelolaan layanan dan reservasi.
+
+Beberapa implementasi utama meliputi:
+
+- autentikasi dan registrasi pengguna,
+- pembagian akses Admin, Dokter, dan Pasien,
+- pengelolaan data pasien,
+- pengelolaan data dokter dan spesialisasi,
+- pengelolaan jadwal praktik dokter,
+- validasi bentrok jadwal,
+- pencarian layanan dan dokter,
+- reservasi janji temu secara online,
+- pengelolaan status reservasi,
+- dashboard berdasarkan role,
+- pengelolaan konten layanan klinik,
+- upload foto dokter dan gambar layanan,
+- serta implementasi REST API untuk data layanan.
+
+## Role Pengguna
+
+### Pasien
+
+Pasien dapat:
+
+- melakukan registrasi dan login,
+- melihat informasi klinik,
+- mencari layanan,
+- melihat detail layanan dan harga,
+- memilih dokter,
+- melihat jadwal dokter,
+- dan membuat reservasi secara online.
+
+Alur reservasi:
+
+```text
+Pilih Layanan
+      |
+      v
+Pilih Dokter
+      |
+      v
+Pilih Jadwal
+      |
+      v
+Konfirmasi Reservasi
+      |
+      v
+Status Pending
+```
+
+### Dokter
+
+Dokter memiliki akses khusus untuk:
+
+- login ke dashboard dokter,
+- melihat jadwal praktik,
+- melihat daftar reservasi pasien,
+- dan mencari data reservasi berdasarkan pasien.
+
+### Admin
+
+Administrator dapat:
+
+- melihat data pasien,
+- mengelola data dokter,
+- mengelola spesialisasi,
+- menambah, mengubah, dan menghapus dokter,
+- mengelola jadwal praktik,
+- melakukan pencarian data,
+- melihat seluruh reservasi,
+- dan mengubah status reservasi menjadi `Pending`, `Done`, atau `Reject`.
+
+## Manajemen Jadwal
+
+Sistem memiliki mekanisme pengecekan jadwal dokter untuk membantu menghindari waktu praktik yang saling bertabrakan.
+
+Validasi dilakukan berdasarkan:
+
+```text
+Dokter
++ Hari
++ Waktu Mulai
++ Waktu Selesai
+```
+
+Jika terdapat jadwal dengan interval waktu yang saling bertumpuk, sistem dapat mendeteksi benturan tersebut sebelum data digunakan.
+
+## Data yang Dikelola
+
+Beberapa entitas utama dalam sistem:
+
+```text
+Users
+Patient
+Doctor
+Specialty
+Schedule
+Appointment
+Services
+WelcomeMessage
+ClinicDescription
+```
+
+Relasi data memungkinkan reservasi menghubungkan:
+
+```text
+Patient
+   |
+   v
+Appointment
+   |
+   v
+Schedule
+   |
+   v
+Doctor
+```
+
+## REST API
+
+Project memiliki implementasi REST API menggunakan **Django REST Framework** untuk menyediakan data layanan klinik.
+
+Endpoint dikonfigurasi melalui:
+
+```text
+/api/Layanan/
+```
+
+API tersebut ditujukan untuk menyediakan data layanan dalam format yang dapat digunakan oleh aplikasi atau sistem lain.
+
+## Teknologi yang Digunakan
+
+| Teknologi | Kegunaan |
+| --- | --- |
+| Python | Bahasa pemrograman backend |
+| Django 5 | Framework web |
+| Django ORM | Pengelolaan database |
+| MySQL | Database relasional |
+| Django REST Framework | REST API |
+| Django Bootstrap 5 | Komponen antarmuka |
+| HTML | Struktur halaman |
+| CSS | Styling |
+| JavaScript | Interaksi frontend |
+| Pillow | Pengelolaan gambar |
+| Git & GitHub | Version control |
+
+## Gambaran Arsitektur
+
+```text
+                 +-----------+
+                 |  Pasien   |
+                 +-----+-----+
+                       |
+                 +-----v-----+
+                 |           |
++--------+       |  Django   |       +-------+
+| Dokter +------>   Web App  <-------+ Admin |
++--------+       |           |       +-------+
+                 +-----+-----+
+                       |
+                 +-----v-----+
+                 | Django ORM|
+                 +-----+-----+
+                       |
+                 +-----v-----+
+                 |   MySQL   |
+                 +-----------+
+                       |
+                 +-----v-----+
+                 | REST API  |
+                 +-----------+
+```
+
+## Kompetensi yang Diterapkan
+
+Melalui project ini, tim menerapkan berbagai konsep pengembangan perangkat lunak, antara lain:
+
+- analisis kebutuhan aplikasi,
+- pemodelan database,
+- pengembangan front-end dan back-end,
+- authentication dan authorization,
+- role-based access,
+- CRUD,
+- form validation,
+- pengelolaan relasi data,
+- pencarian dan filtering,
+- pengelolaan jadwal,
+- reservasi online,
+- REST API,
+- pengelolaan media,
+- debugging,
+- serta kolaborasi pengembangan menggunakan Git/GitHub.
+
+## Konteks Project
+
+Project dikembangkan sebagai **proyek kelompok akademik S1 Informatika Universitas Mulawarman**.
+
+Dental Clinic XuenSun memberikan pengalaman dalam membangun aplikasi yang memiliki beberapa jenis pengguna dan kebutuhan berbeda, serta mengelola alur bisnis mulai dari penyajian informasi layanan hingga pencatatan reservasi pasien.
+
+> Dokumentasi penggunaan dan screenshot setiap fitur tersedia pada bagian **Manual Book** di bawah. 
+
 # MANUAL BOOK
 
 ## Logo aplikasi 
